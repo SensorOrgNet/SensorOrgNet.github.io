@@ -1,0 +1,92 @@
+#UVic robots.txt
+User-agent: *
+Crawl-delay: 30
+#Googlebot specs https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt
+#More specific rules (the allows here) trump more general rules
+Allow: */wp-includes/*/*.css$
+Allow: */wp-includes/js/*.js$
+Allow: */wp-includes/js/*/*.js$
+
+#WORDPRESS-1268 Discourage bots from indexing search pages in robots.txt
+Disallow: */search/
+Disallow: */globalsearch/
+
+Disallow: */cgi-bin/
+Disallow: */et_temp/
+Disallow: */exports/
+Disallow: */localextras/
+Disallow: */TOSPages/
+Disallow: */related-tags*
+Disallow: */trackback/
+Disallow: */server-status/
+Disallow: */wp-admin/
+Disallow: */wp-config*
+Disallow: */wp-content/cache/
+Disallow: */wp-content/themes/*.php
+Disallow: */wp-includes/
+Disallow: */xmlrpc.php
+
+Disallow: /*.7z
+Disallow: /*.7zip
+Disallow: /*.asp*
+Disallow: /*.bak
+Disallow: /*.bz
+Disallow: /*.bzip
+Disallow: /*.cfm
+Disallow: /*.cgi
+Disallow: /*.gz
+Disallow: /*.gzip
+Disallow: /*.inc
+Disallow: /*.ini
+Disallow: /*.json
+Disallow: /*.|jsp*
+Disallow: /*.old
+Disallow: /*.log
+Disallow: /*.phar
+Disallow: /*.php4
+Disallow: /*.php5
+Disallow: /*.php~
+Disallow: /*.pl
+Disallow: /*.py
+Disallow: /*.rar
+Disallow: /*.readme
+Disallow: /readme.html
+Disallow: /*.sh
+Disallow: /*.sql
+Disallow: /*.tar
+Disallow: /*.tgz
+Disallow: /*.txt
+Disallow: /*.xml
+Disallow: /*.zip
+Disallow: /*.|jsp*
+
+Allow: /*.css$
+Allow: /*.js$
+
+
+#Dicourage bots I do not care to support ====
+
+User-agent: msnbot 
+Crawl-delay: 1
+
+# digg mirror
+User-agent: duggmirror
+Disallow: /
+
+# MJ12bot http://mj12bot.com/
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /*
+
+User-agent: Sogou inst spider
+Disallow: /*
+
+User-agent: Sogou spider2
+Disallow: /*
+
+User-agent: Experibot*
+Disallow: /*
+
+#End of UVic robots.txt

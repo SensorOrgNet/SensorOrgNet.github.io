@@ -1,0 +1,146 @@
+<!DOCTYPE html><html>
+
+<head>
+    <title>University of Victoria - Sign in Service</title>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://www.uvic.ca/cas/css/uvicstyles.css"/><link href="https://www.uvic.ca/assets/core-4-0/css/core.css" rel="stylesheet"><link rel="icon" src="" type="image/x-icon"/></head>
+
+<body class="uv-info login" id="cas">
+
+	<header id="uv-header">
+        <div id="uvicbar_holder"></div>
+        <a href="./wp-login.php%3Fredirect_to=https:%252F%252Fonlineacademiccommunity.uvic.ca%252Fsensornet%252Fecg-analysis%252F.html#uv-main" class="sr-only sr-only-focusable">Skip to main content</a>
+        <div class="uv-hdr uv-hdr--internal">
+            <div class="uv-hdr__container container">
+                <div class="uv-hdr__name"><a href="https://www.uvic.ca/tools/index.php">Online tools</a></div>
+            </div>
+        </div>
+    </header>
+    <main id="uv-main" class="uv-main uv-main--info">
+        <div class="container">
+            <div class="row uv-main__row--head">
+                <div class="uv-content">
+                    <div class="row uv-sect uv-sect--head">
+                        <div class="col-12">
+        <h1 id="ipn-sign-in">Sign in to UVic</h1>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row uv-main__row">
+                <div class="uv-left"></div>
+                <div class="uv-content">
+        <!-- Content start --><div class="row uv-sect">
+            <div class="col-12">
+                <div id="alert--container"></div>
+                
+                <div>
+
+	<form method="post" id="fm1" action="https://www.uvic.ca/cas/login">
+		<span id="login-form-controls">
+			<div class="row">
+				<div class="col-md-8 col-lg-6">
+
+					<div class="form-group" id="usernameSection">
+							<label for="username">NetLink ID:</label>
+
+							<input class="form-control" id="username" size="25" type="text" accesskey="u" autocapitalize="none" spellcheck="false" autocomplete="username" autofocus name="username" value="" /><script type="text/javascript">
+								/*<![CDATA[*/
+								var username = "";
+								var disabled = false;
+
+								if (username != null && username !== '') {
+									$('#username').val(username);
+									if (disabled) {
+										$('#usernameSection').hide();
+									}
+								}
+                                /*]]>*/
+							</script>
+					</div>
+
+					<div class="form-group" id="passwordSection">
+							<div class="caps-check">
+								<label for="password">Password:</label>
+
+								<input class="form-control" type="password" id="password" size="25" accesskey="p" autocomplete="off" name="password" value="" /></div>
+
+							<!-- <div class="mdc-text-field-helper-line caps-warn">
+								<p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg text-danger">
+									<span th:utext="#{screen.capslock.on}" />
+								</p>
+							</div> --><!-- <button class="reveal-password mdc-button mdc-button--raised mdc-input-group-append mdc-icon-button" type="button">
+							<i class="mdi mdi-eye reveal-password-icon"></i>
+							<span class="sr-only">Toggle Password</span>
+						</button> --></div>
+
+					<section class="cas-field my-3">
+						</section>
+
+					<div class="form-group">
+						<div class="form-check">
+							<input type="checkbox" class="form-check-input" name="rememberMe" id="rememberMe" /><label for="rememberMe" class="form-check-label">Keep me signed in for 8 hours</label>
+						</div>
+					</div>
+
+					<section class="cas-field">
+
+						<input type="hidden" name="execution" value="02593969-daa2-498b-b294-48dee673decd_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5Lkk2YTlkUkZwLVp0UDl6Z3NsYTg0RmZZQUExN3cyS1EtUVU1d28wY1dtVDZ4Q0k4SHhHYkJvaTBlWnhMWDB3cmtOYmk2RWhQd2xuZVMzWVdXdEIwSWFvYUQ2OFFKUzRXd19PblNzb0xYVFRuZG1uQWd6bl9NYm1EaTBINjA0SURibWR6RUpVREhieXlGT3VLUElYT2lONHZTQkF0Uzh1aGlET2lXOGNDVHVrTWxnTWUyVzJsUXJDNl9BVldIZk1pUWlCMEktYmJvcUhzYUR4TGRhNjJQaDVqNnRXZXBrSWxKd19fZUJIWHpHeTFYWE9sUUF5X2Q3b3d2QU5HUkdMcU5vS0pUWFVvb3ZWbUNhQmJ5bmJXR01Zd3M2Z1Z5QmFQVlBUa2p5TEgyeHZXUEY0QmRaemVyay1hNUh4VGhFUjRHYVJWRjFCOHNXV25qcVBGSEVtR1c1cDZZTjR0TjNlaDVwWVBVNi1lSzVqMTdDWEs4cWdnYTlCOTlUUzhLN3lONWM3Z2NsOEQ2WjMtcTdBc2RoMDJ1MFhIZGNUZ0NLa1lpYkJkcUdXSGtTUVZLM2ZXdDBUUU9fWWJIZ01LZE5nQzFVdDZkMnF1QklYZXpieXUzNU1ocGRvT0JuRUdGcjFWR2N1OVNrMWwwYTV3MmpLZXMwQW5VTUNmUEVKdG8yVVdPZEhTb3l5Q3ZzVXVfUHQ1OWRMLWU4bHZUZTRILWV3ZjNMZXd3ZTVpUVJVU1B2QnZLcUQzc01vbC04V0VfbG1qMWNld3JwUFdyOV9LSFh4U2NCZzNHMzBDanhLajZOOWVJVHNyelpSc1VqM0p3clZMQ3U0SWpjNFRXa0RPV0w0ZEhUa2MxVmQ3c3phSDZyTkpVU1gzU0hfVkZOWk44US04YTdrb3JjbUdnWVRmVVd1blhnOXZIVktWWmxzdUI5YlVRM3piTy1oOVgtZThrcmo2WXJuY1B1WVI5OWhPQS1aWmhvN0ZjOHU1VFFvcXBEV2RuM1VnQTY1VUotOUVsSHhFdm10OUIzT3AzSDlFLWJXSTBaaVBjUVFJNGlLT01ucWdxTnpwc2VQMkNNZ2x3akVIdWlfNUtyUnZVN3J4emViY3NwTXZXTnZVZDBnZzFyXzZldDU1Y0FEZjZVSEZ3RENfYzNhd1Z3QU80N09XUmNCTUVXenRDbVl1Nk5sd3NnYVhRYnNtX1BBZ3VhV2JpNUc5SlVJdFIxZmZzY2dhTi1zbnFlY2hOWWdhblJCS056eXBFSGxBZ1R1RlVuZnlwcHpiM3hJVVZKTzA5RTRZS19OZHF1R2lJU2Vvc0pLd2VUUXduUjAtdzlKY0xyekdfaUpid0lpczVteXg2cHdGN0wyM1R1NEs5ZzRoODRVamY5SlR2dzA1ekVrQzk5eTBDVDFrSGRFZVZHSDlQZl9SSWZhZ0NFVk1ib2VQa25BcmQ2bHU1NTRTaHZfR3NCSkNjZ2N0N0V0MVNWdmtIcXVnM1RNR0NXdl9Xbmd1bFdiSXJ4NlkxM2U4a0hrYndVaHdQdTg4aUN4N1llakNDUGhMRDdDOXJ0WDBRVWhKWjQzMzdyVnFrUWdVUFdCeEZHYlZyb3pLRjFMZ3oyLThWaGhKUDFPRVdDOUs3NHpaNFpRMXJsZnBsYUE1RGhEdE9KWkloaEl4Y0dmd0pyX3JrSW9OTy1LRUtnRUlsaFZiSU85Sld3UHVtRDBFdi1KNWp5RU9qaEgwRks5QzFkM2V4YldSV2gxVjVpMmNsUkN5WTAzWmRxSW5WSzlIcmp6bWg4eUtZaFEzOVBUNDY3b1UyZ2t2cXM2UGx1TGVtVUFUTnFGOUhvTFVqRGk5OVVnbmRjLURoZExrLTlielFyUi04WFE3bnpVakVpX3BncHlTMFdnQkJuYTkzQndrYUxqWGFPdElwWWQyMWdfRjJBTngxdjBEd0xjQVg4VVpYUlFpUmRzZUFOVkZMSGNNOTVJdjV3SlIzMmZUelNuVmtCTUtpalo4V240T0pDNDg1YjVrUFZ3dWtlWWdKOXg2ZE5zNzVnZllTWnlGMTVzTkdjOXZSRWUtdkpxV3pPYkI5MTFuOHZHSHktamJnNXBjd2FYbmJ6SjZOZEoxRDVYVGtPeUtJYk84VkcxMk40a01JcHVka25jS0ZJVkpjRGREX1d5OWItVlg0YmIySGYzQ3BGaUo3UWJ5SkxFYkt4ZjZRTHYzdGpSbVNJd2kwRG9SRkxfZXlfR09odk1JTDNhSE9fb3F3YnBjRmxBUXMwN0pwcTVqaWpXZDFic05tU3k5Z2RXZ21PZFZadFpOUm9TckV3WHEwR19nVTRQZnVwRkFZM2FIVi0tejBZeS1aZ3hlRjZNZ0VORlJmU0lWVWs1MlZUOE15LUhHUTFKZG1jLVBUdEdEZ2JjVDB3UEFTLVJaQjZ6b2VDcjZRQmVHVDFuOHl1bXJsREdXN2c3QlY5SHNUWFJwQ3MzbTVSZDdOY1gwUnJUMVV2aUlSNlMyaWlmQW8tUWNKeEYwWGltOXhQZjJSejdKOXctVmc0U3hUcmk0TjZkQlUtdVg0emw5bHNueHIyNUx4YWFWaC0tZVJhb2g0ZURiTzlWOWZLak9WWFFLMWdlbjdmMk1zSFREVElIUmEyaHo1U05IRFVKdHBucGFYRjVObHEyV3d2X2xBbkMxTDJhS3RBbjBnUDdVZzhJNzI3TjlXV0dPanEwVFA5V3VtNXpVcDJzLXAwN2t5RWZEc2dVbnM0WU5qWU5XNGZ4QXlRS0J3dW16Mkp1c1dfa0ROMmNaTnltNlpiaTRBcDBzY3AxSXZfTkEtY2NKamRReDFlSjEzeVg0VFlnVW5nWjF3dllCQmduSVRNU3pPMWlSVnp5NFBOcF9LdnJ2bEcwWWdUM0Frd1hOWlpmV0lpREY3VjFhWl82eXJyNlRpbUxUc0JESjdEV2hkZGFlTDQ5NWN5RnRETVg5MU1fNHpxSUY5MXZROV9WTnVkR1oyYzZNQmN4WHNOdkMzbm00Y2MwQXptMHNGWDhfR0NaSEFZTmdveW56SHFpYVFmbTNBOUNoR29LMVgtdFJqOWpMcWh1WUNYYUdYdmtxNFFZZk9QZnRkR1V2ejdqYlpUUEMwQlk1U1hGajRtVXVUX2hhVXZfU1IyMGl5TXR2M3dGay1Ba2dON2NpdVJ6SkN2b0E3dWp4WDVDa3c5b3VKYzA4U3JDa3J4TU5tTUNneVBhSnZnbk52VklqQmxEby1EQWJnRm55VVVueGNiQndTWGRjMnlSSEhtNFo3bk5RVGpGZkUzbHRNeWdUSmkzUjJjVTNYM05Db21ialZiVzk4VTJCMTlTYmVySko0c3lTZ1luRmtHUVdQZ2ctb01UN0lnV1MwSTllTjRZOTFxZXFMelhHQjNSWkpWWkNQazBSUFhjWTBBb3pHMUdLYkVoZk9ZUEZaa2hHYUVQTXRUSF9tR1BVeUNjTld4YnlRT3Q1Wl9HVkNIUUl4cElZcUhuQ3Q1Tl9XaXZldENLSzQ2RGpUOUlXdlZyNTBhQUpLNUF6QjFocEtsekthSFFhQXFjZkdDOU9MR3lmb05QdVRNdXhHY0NhQTNQS0RnM2RDOTNDRnRPT3lvVGh6WU1COXpUazlmU3VvRzRRSEQxOS1vaGRaU21mUkFLbWNZS0lhQ0wyT0NidG5Oc2lzeU9tZDJDcUZTN3pSR2FMTDBOWVlCR29QekVsY1ZDWjB1S1Vjdi1DSS1pM0JVNXZPSEZsVjdfS212NTZud2M4Y2EyMmZGV1VvTjBzeVZ1SFJQOEhCdjVVWWEwSzlOUXhXdHhZdkRXYUdTbXlGLTlZNGhtNVF5dHE1Z3ZHQmZyTGQ0ZnpOeVU5Mlk5LVAwNXgta3ptdHpnTl96Wjk1bGJGVDBCa3p2TVNIdnhqRE1mSWo1d25JZFJVTHpDVHp2UEhwSzNTNXNXRTlkRGxZT3ZTcWR4OXBrN0FCVGU1WDVCakdsRTVKT1BsWW5QRm9sSVJieEM1eHROZFJxZzhSTmx2TTJPZ0dvcEZvdTBrSWlvdUlWMmNvNEhlbGtRejJlQTdQY1l0eVU1bnVTRFYyMXExSmlOOEFhTzczcmh0dHdFZWs4TkVVSGg5VzRVeUV2MUNXNEJoSWZqREhveW9iOHFrWEZKcVI3Zk1NQ3pmbWkxcGo5bko0bUttRjFGc0VEVlRDa1l6dlh4a3VDUnAwaG05OHZYeDM1M2lDQkd6b2hQbGx6V0dBaTZxT09EeW5zckxhanFFbk16dFIwS3hnTHllU2ZadmpZOGFxWnM5bXdMS2ZibUtYSlJTamdKLWJLRzN1T0dLUmVWQzE3cmpnNnQtTF90X25uQUJtaUszRlRIVHpfVUN1LUhPbTRDSTM1MUhDem5xQ3R1cTY4WXVWcjRmM0FHYzdnWlhBUDBmVHI0eFc2S2JJdlQyUXhCaFJoTW5oX2w2QnZaTHlhbFdXdUJtS1FFdEszMTZwX0ozXzlJckN5RE90U1U0NURWQ3UwZ2NzQmVlSmUxdWtHa2FYV1QxdnQxNGk4YXMwMWRCUTdqTFYtMmc2Rkw3QTVEZWxTbS1xUVRMOGtXaGNHRDhtSzEyZkQ2YkhoNVdDZ0NSS1RWdWQ1d0l4cVhGSXl3emEyMEczREhGcHVMQnFjYWEtb3Y2MThQSUY2Rk9ZUGZ3VTJ1SDN3dWsyY0FRdHEtLU5ZV2ZCVTJsT21LZVBnTWVnTm8tT2lpNDJiY2xuZ09lU1Nma2tDVmRodloyR2ZLVDVCSGhCSGptZ1hnWnVRS25BdFNRRjk1dGExbGJ6WDlmdURIeU9COUdIOEhKRHZSYV9WYnJhb2QzNEo0X2Jlc2d6WXREYWlnWWF0ZmVPU0RzN1Z1QU1SbEx2RUN6NWVwMzY1Mm1vY2ZjQlJsWnQ5b0xfc3VUQlJxcGJ3anVrWnRUZUs5WEVLNjBGT1c0WFZNb1BvYUh4R0c4NkhGeDhWYlVqVUF1cWNYeENzb1hWdzRkSWl0NnNSYzZrQkV2bmR3ZUpOazlseXVmV1ZrNDNpMzVNQmhwSkpVV1NadFlWdndYWVNDTm1Ndk0zTGpmdzU5dnQ3LVVoZWgzTjVUdWVjYjNaYXZVanVia2E5TDEyZE84ellWMHhNcEZXb0Vtd2lUbWFWNWp5djdIaVdZeXFmMDByNVlseWZLeV91VkpMWnAweF9CazU5VmR2WnkyWDdjUlFadGJXd09kaEQxaTZvQWxzZHV1WlZxU3J5eFNjQ1lsMDh0d2RmQWxrelRlRU1xeGQ5cmFRaWxzbVNNU1IzOVVhcXdzN3A4WXNjdzVNYWVPeFlreHo3cGJDTTFZOHFkVjlVNWJsXzNERE9RVnVZcGdFbVQwcDFBeTk5YTVFY212b09xSlJ4MHVndHVBOFhuN21pYV9uLWgtUHpSdWhkX2diQVczX2xycVFocUFMSkp5dG90WW5ZWU1PRW5yWFI4NHZ1US45WUV2dHNXWEdmS2c1VW9pNkk5akRGcW9kU2ZLVDAtZHVpUFBjNVMzeHVmTkI2SHBoTHRaZlFDTGNpOWhUcUVVbUlzLUhBdnZLS2Jka2xnQkpuQnJGdw==" /><input type="hidden" name="_eventId" value="submit" /><input type="hidden" name="geolocation" /></section>
+
+					<div>
+
+	<button class="btn btn-primary" name="submit" id="form-submit" accesskey="l" type="submit">
+		<span>Sign in</span>
+	</button>
+
+	</div>
+				</div>
+			</div>
+
+		</span>
+	</form>
+
+	<script type="text/javascript">
+		document.getElementById("username").focus()
+	</script>
+
+</div>            
+            </div>
+        </div>
+
+        <div class="row uv-sect">
+	<div class="col-12">        
+		<ul>
+			<li><a href="https://www.uvic.ca/uvicid/get/index.php">Don't have a Netlink ID?</a></li>
+			<li><a href="https://www.uvic.ca/netlink/recover/identifyIssue">Forgot your password?</a></li>
+			<li><a href="https://www.uvic.ca/systems/contact/">Need help?</a></li>
+			<li><a href="https://www.uvic.ca/systems/about/informationsecurity/information/safecomputing.php">Security &amp; privacy</a></li>
+			<li><a href="https://www.uvic.ca/services/studentlife/student-conduct/online-student-conduct/index.php">Online student conduct</a></li>
+		</ul>
+	</div>
+</div>
+
+        <div class="row uv-sect">
+	<div class="col-12">
+		<h2 id="ipn-usage-policy">Usage policy</h2>
+		<p>By Signing in you will be authorized to access your applications and websites that use the UVic Sign in service. Use is subject to but not limited to the following policy:</p>
+		<ul>
+			<li><a href="https://www.uvic.ca/universitysecretary/assets/docs/policies/IM7200_6030_.pdf" class="icoa icoa--pdf">Acceptable Use of Electronic Information Resources Policy</a></li>
+		</ul>
+		<p>For further information, see the listing of <a href="https://www.uvic.ca/universitysecretary/policies/search/index.php" class="icoa icoa--out">University Policies</a>.</p>
+	</div>
+</div>
+        <!-- Content end --></div>
+                <div class="uv-right"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="ftr" id="uv-footer"></footer>
+    <script src="https://www.uvic.ca/assets/core-4-0/js/scripts.js" type="text/javascript"></script> 
+    <script src="https://www.uvic.ca/assets/core-4-0/js/status.js" type="text/javascript"></script> 
+    <script src="https://www.uvic.ca/global/footer.js.php?vrs=4.0" type="text/javascript"></script>
+    <script src="https://www.uvic.ca/global/header.js.php?vrs=4.0" type="text/javascript"></script>
+    <script crossorigin="anonymous" integrity="sha384-77qKPo2YY8GA9nvRZG0ePJHUXw+olOD2UH6gGJjIL7/DDqVQcdACgVCd31ANHcxL" src="https://kit.fontawesome.com/701a506baf.js"></script>
+</body>
+</html>
